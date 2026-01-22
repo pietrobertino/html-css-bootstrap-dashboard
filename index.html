@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Dashboard</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -39,7 +41,8 @@
                     </li>
                 </ul>
                 <form class="d-flex " role="search">
-                    <input class="form-control me-2 bg-light" type="search" placeholder="Cerca..." aria-label="Search" />
+                    <input class="form-control me-2 bg-light" type="search" placeholder="Cerca..."
+                        aria-label="Search" />
                     <button class="btn btn-outline-light" type="submit">Cerca</button>
                     <!-- Come fare per rendere la scritta dell'input nera? 
                      come cambiare l'effetto del select?-->
@@ -54,6 +57,7 @@
 
             <div class="row row-cols-1 row-cols-lg-2">
 
+                <!-- Tabella del catalogo dei libri -->
                 <div class="col col-lg-9 bg-light">
 
                     <div class="d-flex justify-content-between align-items-center py-3">
@@ -69,7 +73,7 @@
                     </div>
 
                     <table class="table">
-
+                        <!-- nece stilizzare tabella  -->
                         <thead>
                             <th>Titolo</th>
                             <th>Data prestito</th>
@@ -83,26 +87,48 @@
                                 <td>I pilastri della terra</td>
                                 <td>-</td>
                                 <td>
-                                    <div class="badge">disponibile</div>
+                                    <div class="badge text-bg-success">Disponibile</div>
                                 </td>
                                 <td>
                                     <div>
-                                        <button class="btn"></button>
-                                        <button class="btn"></button>
+                                        <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-pencil-fill"></i></button>
+                                        <button class="btn btn-outline-secondary btn-sm"><i class="bi bi-trash-fill"></i></button>
                                     </div>
+                                    <!-- come centrare i bottoni sotto alla parola azioni????????? -->
                                 </td>
                             </tr>
 
                         </tbody>
                     </table>
 
-                    <!-- tabella con catalogo libri -->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, amet asperiores. Explicabo placeat alias iste ea consequuntur animi laborum eum pariatur dolor illo, dolores labore consequatur voluptatibus neque accusantium maxime aperiam voluptas? Dicta consequatur quaerat qui est, saepe ab eveniet, id tenetur fugiat consectetur officia. Inventore, praesentium quos porro doloribus ullam pariatur odio aut quo, accusantium sunt minus sed? Ratione dolorum consectetur voluptatum eos veritatis eveniet pariatur cupiditate ipsum nesciunt cum, ut deserunt vel quaerat hic maxime qui animi tempore libero quam! Totam dolores, sequi ab architecto consequatur reprehenderit quisquam illo quis. Doloribus porro illum fuga natus distinctio praesentium, cupiditate delectus perferendis quam corrupti. Eos voluptate voluptatibus velit qui dolorum, doloremque ipsum est blanditiis numquam quisquam dolor libero sunt maxime ullam magnam corporis fuga voluptatem totam harum laudantium delectus consectetur, hic modi repellendus. Natus eos ullam, soluta aliquid minus et aliquam modi eaque error quae esse explicabo consequuntur velit quidem, eligendi corrupti saepe quia reprehenderit. Expedita, dolorum nisi, molestiae rerum dolore consectetur nostrum, accusantium vel qui labore id magnam ab harum? Iure, perspiciatis. Cumque in nostrum facilis iste, quaerat eveniet! Eos, doloremque consequatur ut hic sunt placeat consequuntur, laborum quibusdam quis id numquam adipisci quod, unde expedita deleniti dolore facere.
                 </div>
-                
-                <div class="col bg-primary col-lg-3">
-                    <!-- colonna con to do(lista) e faq(ad-qualcosa) -->
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam minus corrupti ab ex, consequuntur natus voluptate, quam obcaecati perferendis, voluptatum nostrum repudiandae soluta quis assumenda officia maxime. Mollitia officiis culpa deleniti nam nesciunt qui recusandae in id eveniet reprehenderit excepturi dolor perferendis ipsam illo nisi consequuntur vel sed iusto enim voluptatem, quia at. Praesentium dolorum expedita accusantium rerum iusto inventore commodi quaerat, exercitationem, incidunt, deleniti harum. Ducimus voluptatum animi sint consequatur alias ea rem magnam exercitationem accusamus quos aliquid beatae fuga, suscipit libero assumenda vel esse omnis, nesciunt voluptatibus eum deleniti. Ullam perferendis suscipit iusto ut id deleniti laudantium eaque similique, adipisci harum recusandae. Quidem modi corporis quibusdam eaque ipsa itaque aut repudiandae doloremque, odio ipsum omnis possimus voluptates harum minima, quasi aspernatur neque praesentium mollitia laboriosam provident? Labore vero dolores fugiat laudantium ut deleniti suscipit! Animi dicta, consequuntur dolorem expedita nobis eveniet reprehenderit eum officiis beatae nulla ipsa sed eos veniam nemo optio quis ab laudantium minima quidem. Obcaecati est placeat a repellendus voluptas vitae, deleniti dolores error veniam suscipit? Nostrum quam adipisci porro assumenda blanditiis doloribus expedita nam corporis similique sit maiores accusantium, nemo aperiam consectetur? Quis quia eos, porro odit ratione sed adipisci fugiat minus doloribus quas.
+
+                <!-- colonna con to do(lista) e faq(accordion) -->
+                <div class="col col-lg-3 bg-light">
+
+                    <div class="card"> <!-- carta to do list-->
+
+                        <h2 class="card-header">To do</h2>
+
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <input type="checkbox" class="form-check-input me-1">
+                                    <label for="Chiamare segreteria">Chiamare segreteria</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" class="form-check-input me-1">
+                                    <label for="Mandare avvisi prestiti scaduti">Mandare avvisi prestiti scaduti</label>
+                                </li>
+                                <li class="list-group-item">
+                                    <input type="checkbox" class="form-check-input me-1">
+                                    <label for="Ordinare nuovi libri">Ordinare nuovi libri</label>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    
                 </div>
             </div>
 
