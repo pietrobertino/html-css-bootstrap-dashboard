@@ -15,7 +15,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> <!--navbar--> <!--usando scorciatoia bs5-navbar-default-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark"> <!--navbar--> 
         <div class="container-fluid"> <!--ricordare container fluid-->
             <a class="navbar-brand" href="./index.html">
                 <img src="./img/duck.png" width="40" alt="">
@@ -55,9 +55,9 @@
                 Nuovo libro    
             </h1>
 
-            <form action="">
+            <form action="#" method="post">
 
-                <div class="row row-cols-2"> <!--riga per nome e cognome dell'autore-->
+                <div class="row row-cols-2 mb-3"> <!--riga per nome e cognome dell'autore-->
 
                     <div class="col">
                         <label for="author-name" class="fs-5">Nome Autore</label>
@@ -70,7 +70,17 @@
                     </div>
 
                 </div>
-                <div class="row"></div>
+
+                <div class="row row-cols-1 mb-3"> <!--riga per titolo del libro-->
+
+                    <div class="col">
+                        <label for="book-title" class="fs-5">Titolo</label>
+                        <input type="text" class="form-control" placeholder="Inserisci il titolo del libro">
+                        <p class="form-text">Titolo versione italiana</p>
+                    </div>
+
+                </div>
+
                 <div class="row"></div>
                 <div class="row"></div>
                 <div class="row"></div>
