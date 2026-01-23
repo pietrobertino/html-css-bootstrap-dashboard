@@ -51,22 +51,22 @@
 
         <div class="container">
 
-            <h1 id="page-header" class="my-3">
+            <h1 id="page-header" class="my-3 bg-light">
                 Nuovo libro    
             </h1>
 
-            <form action="#" method="post">
+            <form action="#" method="post" class="bg-ligth">
 
                 <div class="row row-cols-2 mb-3"> <!--riga per nome e cognome dell'autore-->
 
                     <div class="col">
-                        <label for="author-name" class="fs-5">Nome Autore</label>
-                        <input type="text" placeholder="Inserisci il nome dell'autore" class="form-control">
+                        <label for="author-name" class="form-label fs-5">Nome Autore</label>
+                        <input type="text" placeholder="Inserisci il nome dell'autore" class="form-control fs-5">
                     </div>
 
                     <div class="col">
-                        <label for="author-surname" class="fs-5">Cognome Autore</label>
-                        <input type="text" placeholder="Inserisci il cognome dell'autore" class="form-control">
+                        <label for="author-surname" class="form-label fs-5">Cognome Autore</label>
+                        <input type="text" placeholder="Inserisci il cognome dell'autore" class="form-control fs-5">
                     </div>
 
                 </div>
@@ -74,16 +74,60 @@
                 <div class="row row-cols-1 mb-3"> <!--riga per titolo del libro-->
 
                     <div class="col">
-                        <label for="book-title" class="fs-5">Titolo</label>
-                        <input type="text" class="form-control" placeholder="Inserisci il titolo del libro">
+                        <label for="book-title" class="form-label fs-5">Titolo</label>
+                        <input type="text" class="form-control fs-5" placeholder="Inserisci il titolo del libro">
                         <p class="form-text">Titolo versione italiana</p>
                     </div>
 
                 </div>
 
-                <div class="row"></div>
-                <div class="row"></div>
-                <div class="row"></div>
+                <div class="row row-cols-1 row-cols-lg-3"> <!--riga per dettagli del libro-->
+
+                    <div class="col mb-3"> <!--colonna genere-->
+                        <label for="book-genre" class="form-label fs-5">Genere</label> 
+                        <select name="genre" id="genre-selector" class="form-select fs-5">
+                            <option selected>Scegli il genere</option>
+                            <option value="giallo">Giallo</option>
+                            <option value="fantasy">Fantasy</option>
+                            <option value="horror">Horror</option>
+                            <option value="noir">Noir</option>
+                            <option value="biografico">Biografico</option>
+                            <option value="fantascienza">Fantascienza</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col mb-3"> <!--colonna anno pubblicazione-->
+                        <label for="publishing-year" class="form-label fs-5">Anno di pubblicazione</label>
+                        <input type="number" class="form-control fs-5" placeholder="Inserisci l'anno">
+                    </div>
+
+                    <div class="col mb-3"> <!--colonna isbn-->
+                        <label for="isbn" class="form-label fs-5">ISBN#</label>
+                        <input type="text" class="form-control fs-5" placeholder="Inserisci il codice ISBN#">
+                    </div>
+
+                </div>
+
+                <hr class="border border-secondary border-1 mb-3"> <!--hr-->
+
+                <div class="row row-cols-1"> <!--riga delle note-->
+                    <div class="col">
+                        <label for="notes" class="form-label fs-5">Note</label>
+                        <textarea name="notes" id="notes" class="form-control fs-5" placeholder="Inserisci eventuali note sul libro"></textarea> 
+                    </div>
+                </div>
+
+                <div class="row row-cols-1 mb-3"> <!--riga della checkbox-->
+                    
+                    <div class="col form-check">
+                        <input type="checkbox" class="form-check-input fs-5" id="digital-available">
+                        <label for="digital-available" class="check-form-label fs-5">Disponibile anche in digitale</label>
+                    </div>
+                </div>
+
+                <div class="row row-cols-1"> <!--riga del bottone del form-->
+
+                </div>
 
             </form>
 
